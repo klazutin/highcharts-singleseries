@@ -1,0 +1,25 @@
+{
+    "name": "singleseries",
+    "version": "0.1",
+    "title": "Single Series",
+    "author": {
+        "name": "Konstantin Lazutin",
+        "url": "https://github.com/klazutin"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/klazutin/highcharts-singleseries/blob/master/LICENSE"
+        }
+    ],
+    "dependencies": {
+        "highcharts": "5.0.3+"
+    },
+    "description": "Adds a hyperlink to each legend item to show only this item and hide the rest",
+    "keywords": [
+        "legend",
+        "series",
+        "only",
+        "isolate"
+    ],
+}
