@@ -1,5 +1,4 @@
-# highcharts-singleseries
-Single Series plugin for Highcharts
+# Single Series plugin for Highcharts
 ![](http://lazut.in/img/github-singleseries.png)
 
 This plugin adds a hyperlink to every legend item clicking on which will hide all other series. Clicking the link again will show all series again.
