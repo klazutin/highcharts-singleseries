@@ -1,7 +1,7 @@
 /**
  * Single series plugin for Highcharts
  * Author: Konstantin Lazutin
- * Version: 0.1.1 (2017-03-01)
+ * Version: 0.1.2 (2017-03-01)
  */
 
 (function (H) {
