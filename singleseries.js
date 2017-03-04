@@ -11,10 +11,15 @@
         separator = chart.legend.options.singleSeriesSeparator || getSeparator();
         onlyWord = chart.legend.options.singleSeriesWord || "Only";
         if (chart.legend.options.singleSeriesEnabled){
-            for (var i = 0; i < chart.legend.allItems.length; i++){
-                chart.legend.allItems[i].singleSeriesName = chart.legend.allItems[i].name;
-                if (separator.includes('<br>')) {chart.legend.allItems[i].name += separator}; // reserve the second line of text in the legend to prevent it from jumping up and down
-                setEvents(i);
+            if (!chart.legend.options.useHTML) {
+                console.log('HTML has to be enabled for the SingleSeries plugin to work'); 
+            } else {
+                for (var i = 0; i < chart.legend.allItems.length; i++){
+                    chart.legend.allItems[i].singleSeriesName = chart.legend.allItems[i].name;
+                    if (separator.includes('<br>')) {chart.legend.allItems[i].name += separator}; // reserve the second line of text in the legend to prevent it from jumping up and down
+                    setEvents(i);
+                    chart.legend.render();
+                }
             }
         }
     });
