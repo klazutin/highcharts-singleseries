@@ -11,8 +11,8 @@
         separator = chart.legend.options.singleSeriesSeparator || getSeparator();
         onlyWord = chart.legend.options.singleSeriesWord || "Only";
         if (chart.legend.options.singleSeriesEnabled){
-            console.log('enabled');
             for (var i = 0; i < chart.legend.allItems.length; i++){
+                chart.legend.allItems[i].singleSeriesName = chart.legend.allItems[i].name;
                 if (separator.includes('<br>')) {chart.legend.allItems[i].name += separator}; // reserve the second line of text in the legend to prevent it from jumping up and down
                 setEvents(i);
             }
@@ -46,13 +46,13 @@ function removeEvents(i){
 }
 
 function setName(i){
-    chart.legend.allItems[i].name = chart.legend.allItems[i].options.name + separator + "<a onclick='processLegendItem(" + i + ")'>" + onlyWord + "</a>";
+    chart.legend.allItems[i].name = chart.legend.allItems[i].singleSeriesName + separator + "<a onclick='processLegendItem(" + i + ")'>" + onlyWord + "</a>";
 }
 
 function removeName(i){
     separator.includes('<br>')
-        ? chart.legend.allItems[i].name = chart.legend.allItems[i].options.name + separator
-        : chart.legend.allItems[i].name = chart.legend.allItems[i].options.name;
+        ? chart.legend.allItems[i].name = chart.legend.allItems[i].singleSeriesName + separator
+        : chart.legend.allItems[i].name = chart.legend.allItems[i].singleSeriesName;
 }
 
 function processLegendItem(index){
@@ -79,5 +79,6 @@ function processLegendItem(index){
             setEvents(i);
         }
     }
+    chart.legend.render();
     chart.redraw();
 }
