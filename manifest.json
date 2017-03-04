@@ -1,5 +1,5 @@
 {
-    "name": "singleseries",
+    "name": "SingleSeries",
     "version": "0.1.1",
     "title": "Single Series",
     "author": {
@@ -13,7 +13,7 @@
         }
     ],
     "dependencies": {
-        "highcharts": "5.0.3+"
+        "highcharts": "5+"
     },
     "description": "Adds a hyperlink to each legend item to show only this item and hide the rest",
     "keywords": [
