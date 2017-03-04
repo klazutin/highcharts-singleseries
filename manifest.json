@@ -21,5 +21,8 @@
         "series",
         "only",
         "isolate"
+    ],
+    "demo": [
+        "https://jsfiddle.net/z38kc2uz/"
     ]
 }
