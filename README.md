@@ -11,4 +11,4 @@ Other options are:
 `singleSeriesWord` - sets the contents of the hyperlink. Defaults to "Only".  
 `singleSeriesSeparator` - sets the separator between the legend item name and the hyperlink. Defaults to `<br>` for horizontal legends and `&nbsp;` for vertical.
 
-Demo: https://jsfiddle.net/z38kc2uz/
+Demo: https://jsfiddle.net/wfmy20sn/
